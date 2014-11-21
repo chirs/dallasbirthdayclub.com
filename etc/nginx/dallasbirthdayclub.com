@@ -9,7 +9,7 @@ server {
 server {
 
             listen   80;
-            server_name dallasbirthdayclub.com
+            server_name dallasbirthdayclub.com;
 
             location / {
                         root   /home/chris/www/dallasbirthdayclub.com/src/;

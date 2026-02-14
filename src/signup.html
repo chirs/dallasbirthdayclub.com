@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign Up — Dallas Birthday Club</title>
+  <title>Apply — Dallas Birthday Club</title>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -130,6 +130,35 @@
       color: #555;
     }
 
+    .intro-text {
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .field-hint {
+      display: block;
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 0.3rem;
+      font-weight: 400;
+    }
+
+    .fine-print {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .confirmation p + p {
+      margin-top: 0.5rem;
+      font-size: 0.88rem;
+    }
+
     footer {
       border-top: 1px solid #e0e0e0;
       padding: 2rem 0;
@@ -155,14 +184,15 @@
     </header>
 
     <div class="signup" id="signup-form">
-      <h2>Join the Club</h2>
+      <h2>Begin Your Application</h2>
+      <p class="intro-text">Membership in the Dallas Birthday Club is not given. It is earned — by being born on a specific day, and by living in or near Dallas. Please complete the following with care.</p>
       <form id="form">
         <div class="form-group">
-          <label for="name">First name</label>
+          <label for="name">Legal first name</label>
           <input type="text" id="name" required>
         </div>
         <div class="form-group">
-          <label>Birthday</label>
+          <label>Date of birth</label>
           <div class="birthday-row">
             <select id="month" required>
               <option value="" disabled selected>Month</option>
@@ -192,18 +222,21 @@
               </script>
             </select>
           </div>
+          <span class="field-hint">This is the most important field. Do not guess.</span>
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Contact email</label>
           <input type="email" id="email" required>
         </div>
-        <button type="submit" class="btn-submit">Sign Me Up</button>
+        <button type="submit" class="btn-submit">Submit Application</button>
+        <p class="fine-print">By submitting, you attest that the date of birth provided is accurate and verifiable. Birthday fraud is taken seriously and may result in permanent disqualification.</p>
       </form>
     </div>
 
     <div class="signup confirmation" id="confirmation" style="display:none;">
-      <h2>You're in!</h2>
-      <p>Thanks — we'll let you know when we launch.</p>
+      <h2>Your application has been received.</h2>
+      <p>A review is underway. You will be contacted if approved.</p>
+      <p>Do not submit a second application. It will not help.</p>
     </div>
 
     <footer>

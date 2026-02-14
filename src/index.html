@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dallas Birthday Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -16,6 +19,10 @@
       color: #2c2c2c;
       background: #fafafa;
       line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: "Instrument Serif", Georgia, serif;
     }
 
     .container {
@@ -38,26 +45,27 @@
 
     header h1 {
       font-size: 1.75rem;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: -0.02em;
     }
 
     .hero {
       text-align: center;
-      padding: 3rem 0;
+      padding: 3.5rem 0;
     }
 
     .hero p {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       color: #555;
-      max-width: 520px;
+      max-width: 540px;
       margin: 0 auto;
+      line-height: 1.5;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.7rem 2rem;
+      margin-top: 2rem;
+      padding: 0.75rem 2.25rem;
       font-size: 1rem;
       font-weight: 600;
       font-family: inherit;
@@ -65,6 +73,7 @@
       background: #2c2c2c;
       border-radius: 6px;
       text-decoration: none;
+      letter-spacing: 0.02em;
     }
 
     .cta:hover {
@@ -72,62 +81,41 @@
     }
 
     section {
-      padding: 2.5rem 0;
+      padding: 3.5rem 0;
       border-top: 1px solid #e0e0e0;
     }
 
     section h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
     }
 
-    .steps {
-      list-style: none;
-      counter-reset: steps;
-    }
-
-    .steps li {
-      counter-increment: steps;
-      padding: 0.75rem 0;
-      padding-left: 2.25rem;
-      position: relative;
-    }
-
-    .steps li::before {
-      content: counter(steps);
-      position: absolute;
-      left: 0;
-      top: 0.75rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      background: #2c2c2c;
-      color: #fff;
-      border-radius: 50%;
-      font-size: 0.8rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .steps li strong {
-      display: block;
-      margin-bottom: 0.15rem;
-    }
-
-    .steps li span {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .about p {
+    section p {
       color: #555;
       margin-bottom: 1rem;
     }
 
-    .about p:last-child {
+    section p:last-child {
       margin-bottom: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.75rem;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
     }
 
     footer {
@@ -144,7 +132,11 @@
       }
 
       .hero p {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+      }
+
+      section h2 {
+        font-size: 1.25rem;
       }
     }
   </style>
@@ -157,33 +149,41 @@
     </header>
 
     <div class="hero">
-      <p>Find your birthday twin in Dallas. Then do something about it.</p>
-      <a href="apply.html" class="cta">Sign Up</a>
+      <p>A members-only organization for individuals in the Dallas&ndash;Fort Worth metroplex who share a date of birth.</p>
+      <a href="apply.html" class="cta">Apply for Membership</a>
     </div>
 
     <section>
-      <h2>How It Works</h2>
-      <ol class="steps">
-        <li>
-          <strong>Sign up with your birthday</strong>
-          <span>Just your birthday and that you live in Dallas. That's literally it.</span>
-        </li>
-        <li>
-          <strong>Get matched</strong>
-          <span>We find someone in Dallas born on the exact same day as you. Not the same zodiac sign. The same day.</span>
-        </li>
-        <li>
-          <strong>Celebrate together</strong>
-          <span>Go get dinner, throw a party, do karaoke, whatever. It's your birthday too.</span>
-        </li>
-      </ol>
+      <h2>Our Mission</h2>
+      <p>The Dallas Birthday Club exists to foster calendrical awareness and to honor the irreducible bond between individuals who entered the world on the same date. We believe that a shared birthday is not a coincidence &mdash; it is a foundation.</p>
+      <p>Our members are united by a commitment to celebratory intent: the recognition that the passage of another year deserves not just acknowledgment, but collective observance. We gather not out of obligation, but out of conviction.</p>
     </section>
 
-    <section class="about">
-      <h2>Why This Exists</h2>
-      <p>Dallas has about 1.3 million people. Statistically, thousands of them share your exact birthday. You've probably sat next to one on the DART. You've definitely been stuck in traffic with one on 635.</p>
-      <p>Nobody's doing anything about this. Until now.</p>
-      <p>Coming soon. For real this time.</p>
+    <section>
+      <h2>Origin</h2>
+      <p>The birthday is the oldest reason to celebrate a person. Before achievements, before milestones, before any act of distinction &mdash; there was the day you arrived. It is the one occasion that belongs to you simply because you exist.</p>
+      <p>Dallas is home to approximately 1.3 million people. On any given calendar date, thousands of them share it as their own. They ride the same trains. They sit in the same traffic on 635. They have never met.</p>
+      <p>The Dallas Birthday Club was founded to correct this. Not with fanfare, but with infrastructure.</p>
+    </section>
+
+    <section>
+      <h2>Questions</h2>
+      <div class="faq-item">
+        <h3>Who can join?</h3>
+        <p>Membership is open to individuals who meet our criteria. Specifics are shared during the review process.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this free?</h3>
+        <p>There are no fees at this time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does the application take?</h3>
+        <p>Applications are reviewed on a rolling basis. Do not inquire about status.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens after I'm matched?</h3>
+        <p>Approved members will receive further instructions.</p>
+      </div>
     </section>
 
     <footer>

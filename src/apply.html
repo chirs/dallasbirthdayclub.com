@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apply — Dallas Birthday Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -16,6 +19,10 @@
       color: #2c2c2c;
       background: #fafafa;
       line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: "Instrument Serif", Georgia, serif;
     }
 
     .container {
@@ -43,7 +50,7 @@
 
     header h1 {
       font-size: 1.75rem;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: -0.02em;
     }
 
@@ -185,7 +192,7 @@
 
     <div class="signup" id="signup-form">
       <h2>Begin Your Application</h2>
-      <p class="intro-text">Membership in the Dallas Birthday Club is not given. It is earned — by being born on a specific day, and by living in or near Dallas. Please complete the following with care.</p>
+      <p class="intro-text">Membership in the Dallas Birthday Club is not given. It is earned — by being born on a specific day, and by living in or near Dallas. Please complete the following with care. Applications are reviewed on a rolling basis. Do not inquire about status.</p>
       <form id="form">
         <div class="form-group">
           <label for="name">Legal first name</label>
@@ -233,6 +240,7 @@
             <option value="formerly">I used to live in Dallas</option>
             <option value="spiritually">Spiritually</option>
           </select>
+          <span class="field-hint">Choose the option that best reflects your current standing.</span>
         </div>
         <div class="form-group">
           <label for="email">Contact email</label>

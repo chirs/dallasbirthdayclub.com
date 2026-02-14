@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 80px;">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,6 +96,12 @@
 
     .nav-link:hover::after {
       width: 100%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
     }
 
     /* ---- Hero ---- */
@@ -317,6 +323,10 @@
       .stats-number {
         font-size: 3.5rem;
       }
+
+      .nav-link:not(.nav-link-primary) {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -335,7 +345,12 @@
       </svg>
       <span class="nav-title">Dallas Birthday Club</span>
     </a>
-    <a href="apply.html" class="nav-link">Apply</a>
+    <div class="nav-right">
+      <a href="#mission" class="nav-link">Mission</a>
+      <a href="#origin" class="nav-link">Origin</a>
+      <a href="#questions" class="nav-link">Questions</a>
+      <a href="apply.html" class="nav-link nav-link-primary">Apply</a>
+    </div>
   </nav>
 
   <div class="hero">
@@ -353,7 +368,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="mission">
     <div class="section-inner">
       <h2>Our Mission</h2>
       <p>The Dallas Birthday Club exists to foster calendrical awareness and to honor the irreducible bond between individuals who entered the world on the same date. We believe that a shared birthday is not a coincidence &mdash; it is a foundation.</p>
@@ -361,7 +376,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="origin">
     <div class="section-inner">
       <h2>Origin</h2>
       <p>The birthday is the oldest reason to celebrate a person. Before achievements, before milestones, before any act of distinction &mdash; there was the day you arrived. It is the one occasion that belongs to you simply because you exist.</p>
@@ -370,7 +385,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="questions">
     <div class="section-inner--wide">
       <h2>Questions</h2>
       <div class="faq-grid">

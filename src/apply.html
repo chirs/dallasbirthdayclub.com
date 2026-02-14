@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 80px;">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,6 +96,12 @@
 
     .nav-link:hover::after {
       width: 100%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
     }
 
     /* ---- Page Header Banner ---- */
@@ -296,6 +302,10 @@
         display: none;
       }
 
+      .nav-link:not(.nav-link-primary) {
+        display: none;
+      }
+
       .page-header {
         padding: 2.5rem 1.25rem;
       }
@@ -329,7 +339,11 @@
       </svg>
       <span class="nav-title">Dallas Birthday Club</span>
     </a>
-    <a href="/" class="nav-link">Home</a>
+    <div class="nav-right">
+      <a href="/" class="nav-link nav-link-primary">Home</a>
+      <a href="/#mission" class="nav-link">Mission</a>
+      <a href="/#questions" class="nav-link">Questions</a>
+    </div>
   </nav>
 
   <div id="signup-form">

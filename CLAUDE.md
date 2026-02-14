@@ -8,7 +8,7 @@ Static website for dallasbirthdayclub.com — a multi-page site served by nginx.
 
 ## Structure
 
-- `src/` — Web root containing `index.html`, `signup.html`, and static assets (images)
+- `src/` — Web root containing `index.html`, `apply.html`, and static assets (images)
 - `etc/nginx/` — nginx server configuration (redirects www to bare domain, serves from `src/`)
 
 ## Deployment

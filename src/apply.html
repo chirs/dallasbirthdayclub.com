@@ -15,7 +15,7 @@
   <link rel="icon" href="images/Flag_of_Dallas.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -24,83 +24,153 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #2c2c2c;
-      background: #fafafa;
-      line-height: 1.6;
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #111;
+      background: #fffef7;
+      line-height: 1.7;
+      padding-top: 72px;
     }
 
     h1, h2 {
       font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+    /* ---- Nav ---- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      background: rgba(255, 254, 247, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
-    header {
-      text-align: center;
-      padding: 2.5rem 0 1.5rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    header a {
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       text-decoration: none;
       color: inherit;
     }
 
-    header .monogram {
-      display: block;
-      margin: 0 auto 0.75rem;
+    .nav-left svg {
+      flex-shrink: 0;
     }
 
-    header h1 {
-      font-size: 1.75rem;
+    .nav-title {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.15rem;
       font-weight: 400;
-      letter-spacing: -0.02em;
     }
 
-    .signup {
-      padding: 3rem 0;
-      max-width: 400px;
-      margin: 0 auto;
+    .nav-link {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #111;
+      text-decoration: none;
+      position: relative;
     }
 
-    .signup h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #111;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* ---- Page Header Banner ---- */
+    .page-header {
+      background: #1a1a1a;
+      padding: 5rem 2rem;
       text-align: center;
     }
 
+    .page-header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      max-width: 540px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    /* ---- Form ---- */
+    .form-section {
+      padding: 4rem 2rem;
+    }
+
+    .form-container {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
     .form-group {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-group label {
       display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: #111;
     }
 
     .form-group input,
     .form-group select {
       width: 100%;
-      padding: 0.6rem 0.75rem;
+      padding: 0.875rem 1rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background: #fff;
       font-family: inherit;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      color: #111;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .form-group input:focus,
     .form-group select:focus {
       outline: none;
-      border-color: #2c2c2c;
+      border-color: #111;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
     }
 
     .birthday-row {
@@ -112,61 +182,60 @@
       flex: 1;
     }
 
-    .btn-submit {
-      display: block;
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 1.75rem;
-      font-size: 1rem;
-      font-weight: 600;
-      font-family: inherit;
-      color: #fff;
-      background: #2c2c2c;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn-submit:hover {
-      background: #444;
-    }
-
-    .confirmation {
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    .confirmation h2 {
-      font-size: 1.35rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .confirmation p {
-      color: #555;
-    }
-
-    .intro-text {
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
-    }
-
     .field-hint {
       display: block;
       font-size: 0.78rem;
       color: #888;
-      margin-top: 0.3rem;
+      margin-top: 0.4rem;
       font-weight: 400;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 0.875rem;
+      margin-top: 2rem;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fff;
+      background: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #333;
+      border-color: #333;
     }
 
     .fine-print {
       text-align: center;
       font-size: 0.75rem;
-      color: #999;
+      color: #888;
       margin-top: 1.25rem;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    /* ---- Confirmation ---- */
+    .confirmation {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .confirmation h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .confirmation p {
+      color: #444;
     }
 
     .confirmation p + p {
@@ -174,110 +243,182 @@
       font-size: 0.88rem;
     }
 
+    /* ---- Footer ---- */
     footer {
-      border-top: 1px solid #e0e0e0;
-      padding: 2rem 0;
+      background: #1a1a1a;
+      padding: 4rem 2rem;
       text-align: center;
-      color: #999;
-      font-size: 0.85rem;
+    }
+
+    footer svg {
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    footer p {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 64px;
+      }
+
+      nav {
+        height: 64px;
+      }
+
+      .page-header {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.4rem;
+      body {
+        padding-top: 56px;
+      }
+
+      nav {
+        height: 56px;
+      }
+
+      .nav-title {
+        display: none;
+      }
+
+      .page-header {
+        padding: 2.5rem 1.25rem;
+      }
+
+      .page-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .form-section {
+        padding: 2.5rem 1.25rem;
+      }
+
+      .btn-submit {
+        border-radius: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/">
-        <svg class="monogram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
-             width="96" height="96" role="img" aria-label="DBC monogram">
-          <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
-          <text x="50" y="48" dy="0.35em"
-                text-anchor="middle"
-                font-family="'Instrument Serif', Georgia, serif"
-                font-size="28"
-                letter-spacing="0.2em"
-                fill="currentColor">DBC</text>
-        </svg>
-        <h1>Dallas Birthday Club</h1>
-      </a>
-    </header>
+  <nav>
+    <a href="/" class="nav-left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
+           width="48" height="48" role="img" aria-label="DBC monogram">
+        <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="50" y="48" dy="0.35em"
+              text-anchor="middle"
+              font-family="'Instrument Serif', Georgia, serif"
+              font-size="28"
+              letter-spacing="0.2em"
+              fill="currentColor">DBC</text>
+      </svg>
+      <span class="nav-title">Dallas Birthday Club</span>
+    </a>
+    <a href="/" class="nav-link">Home</a>
+  </nav>
 
-    <div class="signup" id="signup-form">
-      <h2>Begin Your Application</h2>
-      <p class="intro-text">Membership in the Dallas Birthday Club is not given. It is earned — by being born on a specific day, and by living in or near Dallas. Please complete the following with care. Applications are reviewed on a rolling basis. Do not inquire about status.</p>
-      <form id="form">
-        <div class="form-group">
-          <label for="name">Legal first name</label>
-          <input type="text" id="name" required>
-        </div>
-        <div class="form-group">
-          <label>Date of birth</label>
-          <div class="birthday-row">
-            <select id="month" required>
-              <option value="" disabled selected>Month</option>
-              <option value="1">January</option>
-              <option value="2">February</option>
-              <option value="3">March</option>
-              <option value="4">April</option>
-              <option value="5">May</option>
-              <option value="6">June</option>
-              <option value="7">July</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </select>
-            <select id="day" required>
-              <option value="" disabled selected>Day</option>
-              <script>
-                var sel = document.getElementById('day');
-                for (var i = 1; i <= 31; i++) {
-                  var opt = document.createElement('option');
-                  opt.value = i;
-                  opt.textContent = i;
-                  sel.appendChild(opt);
-                }
-              </script>
-            </select>
+  <div id="signup-form">
+    <div class="page-header">
+      <h1>Begin Your Application</h1>
+      <p>Membership in the Dallas Birthday Club is not given. It is earned — by being born on a specific day, and by living in or near Dallas. Please complete the following with care. Applications are reviewed on a rolling basis. Do not inquire about status.</p>
+    </div>
+
+    <div class="form-section">
+      <div class="form-container">
+        <form id="form">
+          <div class="form-group">
+            <label for="name">Legal first name</label>
+            <input type="text" id="name" required>
           </div>
-          <span class="field-hint">This is the most important field. Do not guess.</span>
-        </div>
-        <div class="form-group">
-          <label for="dallas">Relationship to Dallas</label>
-          <select id="dallas" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="resident">I live in Dallas</option>
-            <option value="metro">I live in the DFW metroplex</option>
-            <option value="formerly">I used to live in Dallas</option>
-            <option value="spiritually">Spiritually</option>
-          </select>
-          <span class="field-hint">Choose the option that best reflects your current standing.</span>
-        </div>
-        <div class="form-group">
-          <label for="email">Contact email</label>
-          <input type="email" id="email" required>
-        </div>
-        <button type="submit" class="btn-submit">Submit Application</button>
-        <p class="fine-print">By submitting, you attest that the date of birth provided is accurate and verifiable. Birthday fraud is taken seriously and may result in permanent disqualification.</p>
-      </form>
+          <div class="form-group">
+            <label>Date of birth</label>
+            <div class="birthday-row">
+              <select id="month" required>
+                <option value="" disabled selected>Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <select id="day" required>
+                <option value="" disabled selected>Day</option>
+                <script>
+                  var sel = document.getElementById('day');
+                  for (var i = 1; i <= 31; i++) {
+                    var opt = document.createElement('option');
+                    opt.value = i;
+                    opt.textContent = i;
+                    sel.appendChild(opt);
+                  }
+                </script>
+              </select>
+            </div>
+            <span class="field-hint">This is the most important field. Do not guess.</span>
+          </div>
+          <div class="form-group">
+            <label for="dallas">Relationship to Dallas</label>
+            <select id="dallas" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="resident">I live in Dallas</option>
+              <option value="metro">I live in the DFW metroplex</option>
+              <option value="formerly">I used to live in Dallas</option>
+              <option value="spiritually">Spiritually</option>
+            </select>
+            <span class="field-hint">Choose the option that best reflects your current standing.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Contact email</label>
+            <input type="email" id="email" required>
+          </div>
+          <button type="submit" class="btn-submit">Submit Application</button>
+          <p class="fine-print">By submitting, you attest that the date of birth provided is accurate and verifiable. Birthday fraud is taken seriously and may result in permanent disqualification.</p>
+        </form>
+      </div>
     </div>
-
-    <div class="signup confirmation" id="confirmation" style="display:none;">
-      <h2>Your application has been received.</h2>
-      <p>A review is underway. You will be contacted if approved.</p>
-      <p>Do not submit a second application. It will not help.</p>
-    </div>
-
-    <footer>
-      &copy; 2025 Dallas Birthday Club
-    </footer>
   </div>
+
+  <div class="confirmation" id="confirmation" style="display:none;">
+    <h2>Your application has been received.</h2>
+    <p>A review is underway. You will be contacted if approved.</p>
+    <p>Do not submit a second application. It will not help.</p>
+  </div>
+
+  <footer>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
+         width="40" height="40" role="img" aria-label="DBC monogram">
+      <circle cx="48" cy="48" r="45" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+      <text x="50" y="48" dy="0.35em"
+            text-anchor="middle"
+            font-family="'Instrument Serif', Georgia, serif"
+            font-size="28"
+            letter-spacing="0.2em"
+            fill="rgba(255,255,255,0.5)">DBC</text>
+    </svg>
+    <p>&copy; 2025 Dallas Birthday Club</p>
+  </footer>
   <script>
     document.getElementById('form').addEventListener('submit', function(e) {
       e.preventDefault();

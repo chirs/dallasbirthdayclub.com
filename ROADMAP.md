@@ -5,7 +5,7 @@ Turn a static site into a functional app where people in Dallas can find and con
 ## Phase 1: Static Site ✅
 
 - [x] Landing page that explains the concept
-- [x] Signup page (static placeholder — no backend yet)
+- [x] Application page with deadpan tone (static — no backend yet)
 
 ## Phase 2: Collect Signups
 

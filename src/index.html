@@ -46,10 +46,9 @@
       border-bottom: 1px solid #e0e0e0;
     }
 
-    header img {
-      width: 80px;
-      height: auto;
-      margin-bottom: 0.75rem;
+    header .monogram {
+      display: block;
+      margin: 0 auto 0.75rem;
     }
 
     header h1 {
@@ -153,7 +152,16 @@
 <body>
   <div class="container">
     <header>
-      <img src="images/Flag_of_Dallas.svg" alt="Flag of Dallas">
+      <svg class="monogram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
+           width="96" height="96" role="img" aria-label="DBC monogram">
+        <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="50" y="48" dy="0.35em"
+              text-anchor="middle"
+              font-family="'Instrument Serif', Georgia, serif"
+              font-size="28"
+              letter-spacing="0.2em"
+              fill="currentColor">DBC</text>
+      </svg>
       <h1>Dallas Birthday Club</h1>
     </header>
 

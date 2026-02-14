@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static website for dallasbirthdayclub.com — a simple landing page served by nginx. No build system, no package manager, no tests.
+Static website for dallasbirthdayclub.com — a multi-page site served by nginx. No build system, no package manager, no tests.
 
 ## Structure
 
-- `src/` — Web root containing `index.html` and static assets (images)
+- `src/` — Web root containing `index.html`, `signup.html`, and static assets (images)
 - `etc/nginx/` — nginx server configuration (redirects www to bare domain, serves from `src/`)
 
 ## Deployment

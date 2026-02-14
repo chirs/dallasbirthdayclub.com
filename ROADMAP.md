@@ -1,27 +1,32 @@
 # Roadmap
 
-The big picture: turn a static landing page into a functional app where people in Dallas can find and connect with their birthday twins.
+Turn a static site into a functional app where people in Dallas can find and connect with their birthday twins.
 
-## Phase 1: A Real Landing Page
+## Phase 1: Static Site ✅
 
-- Redesign the current page so it actually explains what this is
-- Add a signup form (collect name, email, birthday, Dallas zip code)
-- Store signups somewhere (database TBD)
+- [x] Landing page that explains the concept
+- [x] Signup page (static placeholder — no backend yet)
 
-## Phase 2: Birthday Matching
+## Phase 2: Collect Signups
 
-- Show users how many other people share their birthday
-- Notify users when a new birthday twin signs up
-- Basic profile pages
+- [ ] Backend to receive and store form submissions (stack TBD)
+- [ ] Wire up the signup form to the backend
+- [ ] Confirmation email on signup
 
-## Phase 3: Social Features
+## Phase 3: Birthday Matching
 
-- Let birthday twins message each other
-- Organize birthday meetups / group celebrations
-- "Birthday Club" pages for each date (e.g., dallasbirthdayclub.com/jan-5)
+- [ ] Match users who share the same month + day
+- [ ] Notify users when a new birthday twin signs up
+- [ ] Basic profile pages
+
+## Phase 4: Social Features
+
+- [ ] Let birthday twins message each other
+- [ ] Organize birthday meetups / group celebrations
+- [ ] Per-date pages (e.g., dallasbirthdayclub.com/jan-5)
 
 ## Open Questions
 
-- Do we require Dallas residency or just Dallas-area? How do we define the boundary?
-- Should matching be exact date (month + day + year) or just month + day?
-- What's the tech stack going to be?
+- Dallas city limits or broader metro area?
+- Match on month + day, or exact date including year?
+- Tech stack for the backend?
